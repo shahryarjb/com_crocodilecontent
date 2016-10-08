@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+				addrulepath="/administrator/components/com_crocodilecontent/models/rules"
+>
+				<fieldset
+					name="details"
+					label="COM_BACKPIC_TEACHER_DETAILS"
+				>
+				<field
+					name="id"
+					type="hidden"
+				/>
+				<field
+					name="label"
+					type="text"
+					label="COM_CROCODILECONTENT_LABEL"
+					description=""
+					size="40"
+					class="inputbox"
+					validate=""
+					required="true"
+					default=""
+				/>
+				<field 
+				    name="type"
+				    type="list"
+				    class="inputbox" 
+				    default="" 
+				    label="COM_CROCODILECONTENT_LABEL_TYPE"
+				    required="true" >
+				    	<option value="1">COM_CROCODILECONTENT_LABEL_TYPE_ACTIVE</option>
+  					<option value="2">COM_CROCODILECONTENT_LABEL_TYPE_SUCCESS</option>
+  					<option value="3">COM_CROCODILECONTENT_LABEL_TYPE_WARNING</option>
+  					<option value="4">COM_CROCODILECONTENT_LABEL_TYPE_DANGER</option>
+					  <option value="5">COM_CROCODILECONTENT_LABEL_TYPE_INFO</option>
+				</field>
+				<field 
+					name="disc" 
+					type="textarea" 
+					default="" 
+					label="COM_CROCODILECONTENT_LABEL_DISC" 
+					description="" 
+					rows="10" 
+					cols="5"
+			    />
+				</fieldset>
+</form>
