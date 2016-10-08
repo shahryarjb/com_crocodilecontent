@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="attribs">
+
+		<fieldset name="attribs" label="PLG_CONTENT_CROCODILECONTENT_SLIDER_LABEL">
+			<field
+					name="id"
+					type="hidden"
+			/>
+			<field 
+				    name="type"
+				    type="list"
+				    class="inputbox" 
+				    default="" 
+				    label="COM_BACKPIC_TEACHER_CONTENT_TYPE"
+				    required="" >
+				    	<option value="1">COM_BACKPIC_TEACHER_CONTENT_JOOMLA</option>
+  					<option value="2">COM_BACKPIC_TEACHER_CONTENT_K2</option>
+  					<option value="3">COM_BACKPIC_TEACHER_CONTENT_EASYBLOG</option>
+  					<option value="4">COM_BACKPIC_TEACHER_CONTENT_HIKASHOP</option>
+			</field>
+			<field
+					name="published"
+					type="radio"
+					label="COM_CROCODILECONTENT_LABEL_PUBLISHED_LABEL"
+					class="btn-group btn-group-yesno"
+					description=""
+					size="30"
+					default=""
+					>
+					<option value="1">
+					COM_CROCODILECONTENT_LABEL_PUBLISHED_LABEL_Y</option>
+					<option value="0">
+					COM_CROCODILECONTENT_LABEL_PUBLISHED_LABEL_N</option>
+			</field>
+			<field
+					name="pic"
+					type="media"
+					label="COM_BACKPIC_TEACHER_CONTENT_THEMS_BACK"
+					description=""
+			/>
+			<field
+					name="width"
+					type="text"
+					label="COM_BACKPIC_TEACHER_CONTENT_WIDTH"
+					description="" 
+					size="60"
+					class="inputbox"
+					default=""
+			/>
+			<field
+					name="height"
+					type="text"
+					label="COM_BACKPIC_TEACHER_CONTENT_HEIGHT"
+					description="" 
+					size="12"
+					class="inputbox"
+					default=""
+			/>
+			
+			<field 
+					name="custom" 
+					type="textarea" 
+					default="" 
+					label="COM_BACKPIC_TEACHER_CONTENT_CUSTOM_CSS" 
+					description="" 
+					rows="10" 
+					cols="5" 
+			/>
+
+			<field 
+					name="template_name"
+					type="sql"
+					multiple="false"
+					query="SELECT template AS value, title AS template_name FROM #__template_styles"
+					class="inputbox" 
+					default="" 
+					label="COM_BACKPIC_TEACHER_CONTENT_THEMS"
+					required="false" >
+					<option value="0">COM_BACKPIC_TEACHER_CONTENT_THEMS</option>
+
+			</field>
+
+			<field 
+					name="label_name"
+					type="sql"
+					multiple="false"
+					query="SELECT id AS value, label AS label_name FROM #__label"
+					class="inputbox" 
+					default="" 
+					label="COM_CROCODILECONTENT_LABEL"
+					required="false" >
+					<option value="0">COM_CROCODILECONTENT_LABEL</option>
+
+			</field>
+			
+			<field 
+					name="first_day" 
+					type="calendar" 
+      				label="COM_CROCODILECONTENT_LABEL_FIRST_DAY_LABEL" 
+					description="COM_CROCODILECONTENT_LABEL_FIRST_DAY_LABEL"
+      				size="30" 
+					readonly="false" 
+					format="%Y-%m-%d %H:%M:%S" 
+					filter="user_utc" 
+			/>
+			<field 
+					name="last_day" 
+					type="calendar" 
+      				label="COM_CROCODILECONTENT_LABEL_LAST_DAY_LABEL" 
+					description="COM_CROCODILECONTENT_LABEL_LAST_DAY_LABEL"
+      				size="30" 
+					readonly="false" 
+					format="%Y-%m-%d %H:%M:%S" 
+					filter="user_utc" 
+			/>
+			<field
+					name="second_ttl"
+					type="text"
+					label="COM_CONTENTFORCROCODILE_TAB_SECOND_TTL_LABEL"
+					description="" 
+					size="12"
+					class="inputbox"
+					default=""
+			/>
+			<field
+					name="sign"
+					type="text"
+					label="COM_CONTENTFORCROCODILE_TAB_SIGN_LABEL"
+					description="" 
+					size="12"
+					class="inputbox"
+					default=""
+			/>
+			<field
+					name="attached_file"
+					type="file"
+					label="COM_CONTENTFORCROCODILE_TAB_ATTACHED_FILE_LABEL"
+					description="" 
+					size=""
+					class="inputbox"
+					default=""
+			/>
+			<field
+					name="show_id"
+					type="radio"
+					label="COM_CROCODILECONTENT_LABEL_SHOW_ID_LABEL"
+					class="btn-group btn-group-yesno"
+					description=""
+					size="30"
+					default=""
+					>
+					<option value="1">
+					COM_CROCODILECONTENT_LABEL_SHOW_ID_LABEL_YES</option>
+					<option value="0">
+					COM_CROCODILECONTENT_LABEL_SHOW_ID_LABEL_NO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>
+	
