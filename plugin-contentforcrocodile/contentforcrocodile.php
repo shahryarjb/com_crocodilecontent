@@ -111,24 +111,7 @@ JFormHelper::loadFieldClass('contentforcrocodile');
 		JForm::addFormPath(dirname(__FILE__) . '/contentforcrocodile');
 		$form->loadFile('contentforcrocodile', false);
 		//-----------------get data from form--------------------------------
-		//------------------------------------------------------------------------------------------------Upload
-						jimport('joomla.filesystem.file'); // for file upload
-
-						// Include dependancy of the dispatcher
-						if (!defined( 'DS' )) define('DS',DIRECTORY_SEPARATOR);
-						jimport('joomla.filesystem.folder');
-						JFolder::create(JPATH_ROOT.DS.'images'.DS.'crocodile');
-					
-						$target_dir = "images/crocodile/";
-						$target_file = $target_dir . basename($_FILES["attached_file"]["name"]);
-						//echo $_FILES[$attached_file]["name"];
-						//$file_tmp =$_FILES[$attached_file]['tmp_name'];
-						if(move_uploaded_file($_FILES["attached_file"]['tmp_name'],$target_file)){
-							echo "File is valid, and was successfully uploaded.\n";
-						} else {
-							echo "Possible file upload attack!\n";
-						}
-						//------------------------------------------------------------------------------------------------Upload
+		
 		
 			
 		foreach ($data as $field) {
@@ -181,7 +164,26 @@ JFormHelper::loadFieldClass('contentforcrocodile');
 			}
 		}
 	
+		//------------------------------------------------------------------------------------------------Upload
 		
+						jimport('joomla.filesystem.file'); // for file upload
+
+						// Include dependancy of the dispatcher
+						if (!defined( 'DS' )) define('DS',DIRECTORY_SEPARATOR);
+						jimport('joomla.filesystem.folder');
+						JFolder::create(JPATH_ROOT.DS.'media'.DS.'plg_crocodile');
+					
+						$target_dir = "media/plg_crocodile/";
+						$target_file = $target_dir . basename($_FILES["attached_file"]["name"]);
+						//echo $_FILES[$attached_file]["name"];
+						//$file_tmp =$_FILES[$attached_file]['tmp_name'];
+						if(move_uploaded_file($_FILES["attached_file"]['tmp_name'],$target_file)){
+							echo "File is valid, and was successfully uploaded.\n";
+						} else {
+							echo "Possible file upload attack!\n";
+						}
+						
+						//------------------------------------------------------------------------------------------------Upload
 		//-------------------get article_id from database to know that if there is Duplicate information---------------------------------
 		$db = JFactory::getDbo();
 		$queryy = $db->getQuery(true);
